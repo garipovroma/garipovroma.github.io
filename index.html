@@ -85,6 +85,12 @@
       .container { grid-template-columns: 1fr; }
       aside { position: static; }
     }
+
+    .separator {
+      border: none;
+      border-top: 1px solid rgba(100, 116, 139, 0.25);
+      margin: 18px 0;
+    }
   </style>
 </head>
 <body>
@@ -93,7 +99,7 @@
     <aside>
       <a href="garipovroma.jpg"><img style="width:80%;max-width:200px;object-fit: cover;" alt="profile photo" src="garipovroma.jpg" class="avatar hoverZoomLink"></a>
       <div class="name">Roman Garipov</div>
-      <div class="role">ML Research Resident</div>
+      <div class="role">PhD Student at NYU</div>
       <nav class="links">
         <a class="link-item" href="https://scholar.google.com/citations?user=GOsPEGgAAAAJ&hl=en" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 3L1.5 8.25a1 1 0 000 1.8L12 15.3l10.5-5.25a1 1 0 000-1.8L12 3z"/><path d="M6 12.6v2.4a6 6 0 004 5.65V16.4l-4-1.8zm12 0l-4 1.8v4.25A6 6 0 0018 15v-2.4z"/></svg>
@@ -121,34 +127,162 @@
 
     <!-- RIGHT COLUMN / MAIN CONTENT -->
     <main>
-      <section>
+
+      <section id="bio">
         <h2>Bio</h2>
-        <p>I am an ML Research Resident at <a href="https://research.yandex.com">Yandex Research</a> × <a href="https://cs.hse.ru/big-data/yandexlab/" target="_blank" rel="noopener">HSE</a> Joint Laboratory, where I work on LLM, LLM Efficiency and Reasoning.</p>
-        <p>Previously, I was a Data Scientist at <a href="https://www.onemarketdata.com/" target="_blank" rel="noopener">OneMarketData</a>, an ML Engineer at <a href="https://vk.com/" target="_blank" rel="noopener">VK.com</a> and an SWE Intern at <a href="https://yandex.com/" target="_blank" rel="noopener">Yandex</a>.</p>
-        <p>I hold a <strong>Bachelor’s Degree</strong> in Computer Science and a <strong>Master’s Degree</strong> in Computer Science, both from <a href="https://en.itmo.ru/" target="_blank" rel="noopener">ITMO University</a>, Saint Petersburg.</p>
+
+        <div class="phd-block">
+
+          <p>
+            I am a PhD student in Computer Science at
+            <a href="https://www.nyu.edu/" target="_blank" rel="noopener">New York University</a>,
+            extremely lucky to be advised by
+            <a href="https://pratyushasharma.github.io/" target="_blank" rel="noopener">Pratyusha Sharma</a>
+            and
+            <a href="https://izmailovpavel.github.io/" target="_blank" rel="noopener">Pavel Izmailov</a>.
+            I work on reasoning, reinforcement learning, and related areas.
+          </p>
+        </div>
+      <hr class="separator">
+        <div class="bio-background">
+        <p>
+          Previously, I was an ML Research Resident at
+          <a href="https://research.yandex.com" target="_blank" rel="noopener">Yandex Research</a>
+          ×
+          <a href="https://cs.hse.ru/big-data/yandexlab/" target="_blank" rel="noopener">HSE</a>,
+          working on large language models, reasoning, and efficient inference.
+        </p>
+
+          <p>
+            I hold Bachelor's and Master's degrees in Computer Science from
+            <a href="https://en.itmo.ru/" target="_blank" rel="noopener">ITMO University</a>,
+            Saint Petersburg.
+          </p>
+
+          <p>
+            I also have two years of industry experience as an ML Engineer.
+          </p>
+        </div>
+      </section>
+
+      <section id="updates">
+        <h2>Updates</h2>
+
+        <ul class="updates-list">
+          <li>
+            <span class="update-date">Sep 2026:</span>
+            Started my PhD at NYU, advised by
+            <a href="https://pratyushasharma.github.io/" target="_blank" rel="noopener">Pratyusha Sharma</a>
+            and
+            <a href="https://izmailovpavel.github.io/" target="_blank" rel="noopener">Pavel Izmailov</a>.
+          </li>
+
+          <li>
+            <span class="update-date">Aug 2026:</span>
+            <em>Reasoning Shift: How Context Silently Shortens LLM Reasoning</em> was accepted to the
+            <a href="https://wdlctc.github.io/efficient-reasoning-2026/" target="_blank" rel="noopener">COLM 2026 Workshop on Efficient Reasoning</a>.
+          </li>
+
+          <li>
+            <span class="update-date">Sep 2025:</span>
+            <em>Hogwild! Inference</em> was accepted to NeurIPS 2025 as a Spotlight.
+          </li>
+
+          <li>
+            <span class="update-date">Sep 2025:</span>
+            <em>AutoJudge</em> was accepted to NeurIPS 2025.
+          </li>
+        </ul>
       </section>
 
       <section id="interests">
         <h2>Research Interests</h2>
-        <p>Large Language Models (LLMs), LLM Efficiency and Capabilities, Reasoning, Language Model Architectures, Reinforcement Learning.</p>
+        <p>
+          Reasoning, Reinforcement Learning, Large Language Models,
+          Language Model Architectures, and related areas.
+        </p>
       </section>
 
       <section id="publications">
         <h1>Publications</h1>
+
         <div class="pub-list">
+
           <article class="pub">
-            <div class="pub-title">Hogwild! Inference: Parallel LLM Generation via Concurrent Attention</div>
-            <div class="pub-meta"><span class="authors">Gleb Rodionov* | <strong>Roman Garipov*</strong> | Alina Shutova* | George Yakushev* | Erik Schultheis* | Vage Egiazarian | Anton Sinitsin | Denis Kuznedelev | Dan Alistarh</span></div>
-            <div class="venue">NeurIPS 2025 <span class="spotlight">Spotlight</span> | <a href="https://arxiv.org/abs/2504.06261" target="_blank" rel="noopener">arXiv</a>, <a href="https://github.com/eqimp/hogwild_llm" target="_blank" rel="noopener">Code</a>, <a href="https://eqimp.github.io/hogwild_llm/" target="_blank" rel="noopener">Project Page</a></div>
+            <div class="pub-title">
+              Reasoning Shift: How Context Silently Shortens LLM Reasoning
+            </div>
+
+            <div class="pub-meta">
+              <span class="authors">
+                Gleb Rodionov |
+                <strong>Roman Garipov</strong> |
+                George Yakushev
+              </span>
+            </div>
+
+            <div class="venue">
+              <a href="https://wdlctc.github.io/efficient-reasoning-2026/" target="_blank" rel="noopener">COLM 2026 Workshop on Efficient Reasoning</a> |
+              <a href="https://arxiv.org/abs/2604.01161" target="_blank" rel="noopener">arXiv</a>
+            </div>
           </article>
 
           <article class="pub">
-            <div class="pub-title">AutoJudge: Judge Decoding Without Manual Annotation</div>
-            <div class="pub-meta"><span class="authors"><strong>Roman Garipov*</strong> | Fedor Velikonivtsev* | Ivan Ermakov | Ruslan Svirschevski | Vage Egiazarian | Max Ryabinin</span></div>
-            <div class="venue">NeurIPS 2025 Poster | <a href="https://arxiv.org/abs/2504.20039" target="_blank" rel="noopener">arXiv</a>, <a href="https://github.com/garipovroma/autojudge" target="_blank" rel="noopener">Code</a></div>
+            <div class="pub-title">
+              Hogwild! Inference: Parallel LLM Generation via Concurrent Attention
+            </div>
+
+            <div class="pub-meta">
+              <span class="authors">
+                Gleb Rodionov* |
+                <strong>Roman Garipov*</strong> |
+                Alina Shutova* |
+                George Yakushev* |
+                Erik Schultheis* |
+                Vage Egiazarian |
+                Anton Sinitsin |
+                Denis Kuznedelev |
+                Dan Alistarh
+              </span>
+            </div>
+
+            <div class="venue">
+              NeurIPS 2025
+              <span class="spotlight">Spotlight</span> |
+              <a href="https://arxiv.org/abs/2504.06261" target="_blank" rel="noopener">arXiv</a>,
+              <a href="https://github.com/eqimp/hogwild_llm" target="_blank" rel="noopener">Code</a>,
+              <a href="https://eqimp.github.io/hogwild_llm/" target="_blank" rel="noopener">Project Page</a>
+            </div>
           </article>
+
+          <article class="pub">
+            <div class="pub-title">
+              AutoJudge: Judge Decoding Without Manual Annotation
+            </div>
+
+            <div class="pub-meta">
+              <span class="authors">
+                <strong>Roman Garipov*</strong> |
+                Fedor Velikonivtsev* |
+                Ivan Ermakov |
+                Ruslan Svirschevski |
+                Vage Egiazarian |
+                Max Ryabinin
+              </span>
+            </div>
+
+            <div class="venue">
+              NeurIPS 2025 Poster |
+              <a href="https://arxiv.org/abs/2504.20039" target="_blank" rel="noopener">arXiv</a>,
+              <a href="https://github.com/garipovroma/autojudge" target="_blank" rel="noopener">Code</a>,
+              <a href="https://www.together.ai/blog/introducing-autojudge-streamlined-inference-acceleration-via-automated-dataset-curation" target="_blank" rel="noopener">Blogpost</a>
+              
+            </div>
+          </article>
+
         </div>
       </section>
+
     </main>
   </div>
 </body>
